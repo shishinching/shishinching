@@ -6,11 +6,14 @@
 }
 
 html, body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;         /* 關掉水平捲軸 */
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -82,33 +85,36 @@ h1 {
   transition: all 0.3s;
 }
 
-/* ===== 手機版 ===== */
 @media screen and (max-width: 480px) {
-
   body {
-    padding: 32px 16px;    /* 手機縮小側邊空白，避免水平方向緊繃 */
+    padding: 0; /* ✅ 移除桌機版左右空白 */
+    margin: 0;
+    background: #f7f7f7;
+  }
+
+  .container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
   }
 
   .logo {
-    width: 300px;          /* 手機顯示較大，但仍可縮 */
-  }
-
-  h1 {
-    font-size: 24px;
+    width: 140px;
+    margin-bottom: 20px;
   }
 
   .btn {
     width: 100%;
-    margin: 12px auto;
+    padding: 16px 20px 16px 70px;
     font-size: 18px;
-    padding: 16px 20px;
-    padding-left: 72px;    /* 比桌機少，對應較小 icon */
-    min-height: 48px;
+    margin: 10px 0;
+    border-radius: 999px;
+    box-shadow: none;
   }
 
   .icon {
     width: 48px;
     height: 48px;
-    left: 16px;
+    left: 12px;
   }
 }
