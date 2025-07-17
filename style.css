@@ -17,15 +17,14 @@ html, body {
 body {
   background-color: #f7f7f7;
   text-align: center;
-  padding: 40px 20px;
 }
 
 .container {
   max-width: 500px;
   width: 100%;
   margin: 0 auto;
+  padding: 40px 20px; /* ← 桌機版的留白放這裡 */
 }
-
 .logo {
   width: 400px;
   max-width: 100%;
@@ -81,7 +80,10 @@ body {
     width: 100% !important;
     max-width: none;
     margin: 0;
+    padding: 0 !important; /* ← 清掉桌機版 padding */
   }
+}
+
 
   .btn {
     width: 100% !important;
@@ -102,4 +104,4 @@ body {
     width: 140px;
     margin: 20px auto;
   }
-}
+
