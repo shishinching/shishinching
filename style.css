@@ -14,18 +14,20 @@ body {
 .logo {
   width: 100px;
   margin-bottom: 10px;
+  transition: width 0.3s;
 }
 
 h1 {
   color: #137031;
   font-size: 22px;
   margin-bottom: 20px;
+  transition: font-size 0.3s;
 }
 
 .btn {
   display: flex;
   align-items: center;
-  justify-content: center; /* 整體置中 */
+  justify-content: center;
   position: relative;
   padding: 20px 24px;
   border-radius: 999px;
@@ -34,22 +36,17 @@ h1 {
   font-size: 18px;
   color: #3b3b3b;
   text-decoration: none;
-  width: 80%;
-  max-width: 500px;
-  margin: 12px auto;
+  width: 90%;
+  margin: 16px auto;
+  min-height: 70px;
+  transition: all 0.3s;
 }
+
 .btn:hover {
   background-color: #137031;
   color: white;
 }
 
-
-
-
-.btn:hover {
-  background-color: #137031;
-  color: white;
-}
 .icon {
   position: absolute;
   left: 16px;
@@ -57,34 +54,27 @@ h1 {
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
+  transition: all 0.3s;
 }
 
-
-
 @media screen and (max-width: 480px) {
-  body {
-    padding: 20px 10px;
+  .logo {
+    width: 140px;
   }
 
   h1 {
-    font-size: 26px;
+    font-size: 28px;
   }
 
   .btn {
-    font-size: 20px;
-    padding: 20px 24px;
-    height: 64px;
+    font-size: 22px;
+    padding: 24px 28px;
+    min-height: 84px;
   }
 
   .icon {
-    width: 48px;
-    height: 48px;
-    left: 16px;
-  }
-
-  .logo {
-    width: 120px;
-    margin-bottom: 20px;
+    width: 56px;
+    height: 56px;
+    left: 12px;
   }
 }
-
