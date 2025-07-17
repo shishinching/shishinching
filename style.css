@@ -1,19 +1,37 @@
+/* 全域：避免計算寬度時溢出 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;         /* 關掉水平捲軸 */
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: #f7f7f7;
   font-family: "Noto Sans TC", sans-serif;
   text-align: center;
-  padding: 40px 20px;
-  margin: 0;
+  padding: 40px 20px;         /* 桌機版外距 */
 }
 
-
+/* 容器不超出螢幕 */
 .container {
   max-width: 500px;
-  margin: auto;
+  width: 100%;
+  margin: 0 auto;
 }
 
+/* Logo */
 .logo {
   width: 400px;
+  max-width: 100%;            /* 若小螢幕 <400px 會自動縮 */
+  height: auto;
   margin-bottom: 10px;
   transition: width 0.3s;
 }
@@ -25,22 +43,27 @@ h1 {
   transition: font-size 0.3s;
 }
 
+/* 連結按鈕 */
 .btn {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  width: 90%;
+  max-width: 100%;
+  margin: 16px auto;
   padding: 20px 24px;
+  padding-left: 100px;         /* 為 icon 預留空間 → 避免文字被壓 & 防出界 */
+  min-height: 50px;
   border-radius: 999px;
   background-color: #fff;
   border: 2px solid #137031;
   font-size: 18px;
   color: #3b3b3b;
   text-decoration: none;
-  width: 90%;
-  margin: 16px auto;
-  min-height: 50px;
   transition: all 0.3s;
+  cursor: pointer;
+  user-select: none;
 }
 
 .btn:hover {
@@ -48,6 +71,7 @@ h1 {
   color: white;
 }
 
+/* 圓形 icon */
 .icon {
   position: absolute;
   left: 30px;
@@ -58,9 +82,15 @@ h1 {
   transition: all 0.3s;
 }
 
+/* ===== 手機版 ===== */
 @media screen and (max-width: 480px) {
+
+  body {
+    padding: 32px 16px;    /* 手機縮小側邊空白，避免水平方向緊繃 */
+  }
+
   .logo {
-    width: 240px;
+    width: 240px;          /* 手機顯示較大，但仍可縮 */
   }
 
   h1 {
@@ -68,15 +98,17 @@ h1 {
   }
 
   .btn {
+    width: 100%;
+    margin: 12px auto;
     font-size: 18px;
     padding: 16px 20px;
-    padding-left: 80px; /* 預留 icon 空間 */
+    padding-left: 72px;    /* 比桌機少，對應較小 icon */
     min-height: 48px;
   }
 
   .icon {
     width: 48px;
     height: 48px;
-    left: 12px;
+    left: 16px;
   }
 }
