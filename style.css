@@ -9,7 +9,6 @@ body {
 .container {
   max-width: 500px;
   margin: auto;
-  padding-left: 10px;
 }
 
 .logo {
@@ -71,6 +70,7 @@ h1 {
     font-size: 22px;
     padding: 24px 28px;
     min-height: 40px;
+    transform: translateX(-10px);
   }
 
   .icon {
