@@ -26,11 +26,13 @@ body {
   padding: 40px 20px; /* ← 桌機版的留白放這裡 */
 }
 .logo {
-  width: 400px;
-  max-width: 200px;
+  width: 100%;
+  max-width: 400px;  /* 或 500px，看你想要多大 */
+  margin-bottom: 20px;
   height: auto;
-  margin-bottom: 10px;
-  transition: width 0.3s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btn {
@@ -60,7 +62,7 @@ body {
 
 .icon {
   position: absolute;
-  left: 50px;
+  left: 100px;
   top: 50%;
   transform: translateY(-50%);  /* ✅ 垂直置中關鍵 */
   width: 48px;
@@ -102,8 +104,10 @@ body {
     left: 12px;
   }
 
-  .logo {
-    width: 600px;
-    margin: 20px auto;
-  }
+.logo {
+  width: 90%;
+  max-width: 280px; /* ✅ 可自行放大到你想要的極限 */
+  margin: 35px auto;
+  display: block;
+}
 
