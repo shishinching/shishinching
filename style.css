@@ -95,7 +95,7 @@ body {
     justify-content: flex-start;
     padding: 18px 16px 18px 68px;
 /* 改成原本的 88px → 現在只給 68px（少了 20px 空間） */
-    font-size: 16px;
+    font-size: 18px;
     width: 100%;
     margin: 14px 0;
     border-radius: 999px;
