@@ -92,7 +92,8 @@ body {
   .btn {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
+    padding-left: 0;
     padding: 25px 10px 25px 75px;
 /* 改成原本的 88px → 現在只給 68px（少了 20px 空間） */
     font-size: 18px;
