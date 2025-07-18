@@ -89,32 +89,30 @@ body {
 }
 
 
-.btn {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;         /* ← 讓文字靠左對齊 */
-  padding: 18px 20px 18px 80px;        /* ← 為 icon 預留空間 */
-  width: 100%;
-  margin: 15px 0;
-  font-size: 18px;
-  border-radius: 999px;
-  box-shadow: none;
-  white-space: nowrap;                /* ❗ 避免自動換行 */
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 18px 16px 18px 88px; /* ← icon left:24px + icon width:48px + margin-right:16px */
+    font-size: 16px;
+    width: 100%;
+    margin: 14px 0;
+    border-radius: 999px;
+    white-space: normal;          /* ✅ 允許換行 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
-.icon {
-  position: absolute;
-  left: 20px;             /* ← 小幅偏右 */
-  top: 50%;
-  transform: translateY(-50%);
-  width: 48px;
-  height: 48px;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
+  .icon {
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
 
 .logo {
   width: 90%;
